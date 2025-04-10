@@ -1,0 +1,13 @@
+services:
+  backend:
+    build:
+      # context: ./backend
+      dockerfile: Dockerfile.backend
+    ports:
+      - '3000:3000'
+    networks:
+      - cv-network
+
+networks:
+  cv-network:
+    driver: bridge
